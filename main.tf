@@ -26,12 +26,12 @@ module "asg" {
   # Autoscaling group
   name = var.asg-name
 
-  min_size                  = var.asg-size[min_size]
-  max_size                  = var.asg-size[max_size]
-  desired_capacity          = var.asg-size[desired_capacity]
-  wait_for_capacity_timeout = var.asg-size[wait_for_capacity_timeout]
-  health_check_type         = var.asg-size[health_check_type]
-  vpc_zone_identifier       = [resource.vpc.private_subnets[0], resource.vpc.private_subnets[1], resource.vpc.private_subnets[2]]
+  min_size                  = var.asg-size["min_size"]
+  max_size                  = var.asg-size["max_size"]
+  desired_capacity          = var.asg-size["desired_capacity"]
+  wait_for_capacity_timeout = var.asg-size["wait_for_capacity_timeout"]
+  health_check_type         = var.asg-size["health_check_type"]
+  vpc_zone_identifier       = [module.vpc.private_subnets[0], module.vpc.private_subnets[1], module.vpc.private_subnets[2]]
 
 
   # Launch template
