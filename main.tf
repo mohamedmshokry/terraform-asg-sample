@@ -52,6 +52,7 @@ module "asg" {
 ################
 module "alb" {
   source = "terraform-aws-modules/alb/aws"
+  version = "~> 6.0"
 
   name    = var.alb-name
   vpc_id  = module.vpc.vpc_id
