@@ -44,6 +44,8 @@ module "asg" {
   ebs_optimized     = true
   enable_monitoring = true
 
+  user_data = file("install_apache.sh")
+
   tags = var.tags
 }
 
