@@ -70,4 +70,3 @@ variable "alb-name" {
   description = "Name of the ALB"
   type = string
 }
-
