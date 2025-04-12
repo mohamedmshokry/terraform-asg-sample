@@ -65,3 +65,9 @@ variable "asg-lt-details" {
   description = "Details of the launch template"
   type = map(string)
 }
+
+variable "alb-name" {
+  description = "Name of the ALB"
+  type = string
+}
+
