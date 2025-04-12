@@ -9,3 +9,18 @@ tags = {
     Terraform = "true"
     Environment = "dev"
 }
+asg-name = "tfcloud-asg"
+asg-size = {
+  "min_size" = 2,
+  "max_size" = 4,
+  "desired_capacity" = 2,
+  "wait_for_capacity_timeout" = 0,
+  "health_check_type" = "EC2"
+}
+
+asg-lt-details = {
+  "launch_template_name" = "asg-lt-sample",
+  "launch_template_description" = "Launch template example",
+  "image_id" = "ami-0274f4b62b6ae3bd5",
+  "instance_type" = "t3.micro"
+}

@@ -46,3 +46,18 @@ variable "tags" {
   description = "A map of tags to add to all resources"
   type = map(string)
 }
+
+variable "asg-name" {
+  description = "Name of the ASG"
+  type = string
+}
+
+variable "asg-size" {
+  description = "Size of the ASG"
+  type = map(number)
+}
+
+variable "asg-lt-details" {
+  description = "Details of the launch template"
+  type = map(string)
+}
