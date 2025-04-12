@@ -30,7 +30,7 @@ module "asg" {
   max_size                  = var.asg-size["max_size"]
   desired_capacity          = var.asg-size["desired_capacity"]
   wait_for_capacity_timeout = var.asg-size["wait_for_capacity_timeout"]
-  health_check_type         = var.asg-size["health_check_type"]
+  health_check_type         = var.asg_health_check_type
   vpc_zone_identifier       = [module.vpc.private_subnets[0], module.vpc.private_subnets[1], module.vpc.private_subnets[2]]
 
 
