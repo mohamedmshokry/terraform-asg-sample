@@ -1,3 +1,12 @@
+variable "AWS_ACCESS_KEY_ID" {
+  description = "AWS_ACCESS_KEY_ID"
+  type = string
+}
+
+variable "AWS_SECRET_ACCESS_KEY" {
+  description = "AWS_SECRET_ACCESS_KEY"
+  type = string
+}
 variable "vpc-name" {
     description = "Name of the VPC"
     type = string
