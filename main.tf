@@ -83,9 +83,21 @@ module "alb" {
 
 
   listeners = {
-    ex-http = {
+    ex-http-https-redirect = {
       port     = 80
       protocol = "HTTP"
+
+      forward = {
+        target_group_key = "ex-instance"
+      }
+    }
+    ex-https = {
+      port            = 443
+      protocol        = "HTTPS"
+
+      forward = {
+        target_group_key = "ex-instance"
+      }
     }
   }
 
