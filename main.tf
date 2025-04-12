@@ -35,12 +35,12 @@ module "asg" {
 
 
   # Launch template
-  launch_template_name        = var.asg-lt-details[launch_template_name]
-  launch_template_description = var.asg-lt-details[launch_template_description]
+  launch_template_name        = var.asg-lt-details["launch_template_name"]
+  launch_template_description = var.asg-lt-details["launch_template_description"]
   update_default_version      = true
 
-  image_id          = "ami-ebd02392"
-  instance_type     = "t3.micro"
+  image_id          = var.asg-lt-details["image_id"]
+  instance_type     = var.asg-lt-details["instance_type"]
   ebs_optimized     = true
   enable_monitoring = true
 
