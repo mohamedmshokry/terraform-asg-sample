@@ -57,6 +57,10 @@ variable "asg-size" {
   type = map(number)
 }
 
+variable "asg_health_check_type" {
+  description = "Health check type"
+  type = string
+}
 variable "asg-lt-details" {
   description = "Details of the launch template"
   type = map(string)

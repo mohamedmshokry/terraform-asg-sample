@@ -15,8 +15,9 @@ asg-size = {
   "max_size" = 4,
   "desired_capacity" = 2,
   "wait_for_capacity_timeout" = 0,
-  "health_check_type" = "EC2"
 }
+
+asg_health_check_type = "EC2"
 
 asg-lt-details = {
   "launch_template_name" = "asg-lt-sample",
