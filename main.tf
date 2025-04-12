@@ -44,7 +44,7 @@ module "asg" {
   ebs_optimized     = true
   enable_monitoring = true
 
-  user_data = file("install_apache.sh")
+  user_data = base64encode(file("install_apache.sh"))
 
   tags = var.tags
 }
